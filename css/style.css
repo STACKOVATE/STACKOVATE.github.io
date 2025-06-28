@@ -1,0 +1,89 @@
+/* style.css - 官网基础样式 */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f9f9fb;
+    color: #222;
+}
+
+header {
+    background: #22223b;
+    color: #fff;
+    padding: 32px 0 24px 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(34,34,59,0.08);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+header p {
+    margin: 12px 0 0 0;
+    font-size: 1.2rem;
+    color: #c9ada7;
+}
+
+nav {
+    background: #4a4e69;
+    text-align: center;
+    padding: 12px 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 18px;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #f2e9e4;
+}
+
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 24px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(34,34,59,0.07);
+}
+
+section {
+    margin-bottom: 36px;
+}
+
+section h2 {
+    font-size: 1.5rem;
+    color: #22223b;
+    margin-bottom: 12px;
+}
+
+footer {
+    background: #22223b;
+    color: #fff;
+    text-align: center;
+    padding: 18px 0;
+    font-size: 0.95rem;
+    margin-top: 40px;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 12px;
+    }
+    header h1 {
+        font-size: 1.5rem;
+    }
+    nav a {
+        margin: 0 8px;
+        font-size: 0.95rem;
+    }
+}
