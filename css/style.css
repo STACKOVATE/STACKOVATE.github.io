@@ -1,9 +1,16 @@
 /* style.css - 官网基础样式 */
 
+@font-face {
+    font-family: 'AlimamaShuHeiTi';
+    src: url('/fonts/AlimamaShuHeiTi.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: 'AlimamaShuHeiTi';
     background: #f9f9fb;
     color: #222;
 }
@@ -50,6 +57,7 @@ main {
     max-width: 900px;
     margin: 40px auto;
     padding: 24px;
+    text-align: center;
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 24px rgba(34,34,59,0.07);
