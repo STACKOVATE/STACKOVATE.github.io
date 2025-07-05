@@ -6,6 +6,17 @@
   <title>Test</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+    <script>
+    // 获取窗口宽度
+    var width = window.innerWidth;
+    // 输出到控制台
+    console.log('窗口宽度:', width);
+  
+    // 也可以根据宽度做响应式处理
+    if (width < 600) {
+      document.body.style.background = "#ffe";
+    }
+  </script>
 </head>
 <body>
   <header>
@@ -13,8 +24,8 @@
   </header>
   <main>
   <p>作者:XiaoHei</p>
-  <img src="images/1.jpg" style="height: 250px; width: auto" title="LOGO_1">
-  <img src="images/2.jpg" style="height: 250px; width: auto" title="LOGO_2">
+  <img src="images/1.png" style="height: 250px; width: auto" title="LOGO_1">
+  <img src="images/2.jpg" style="height: 220px; width: auto" title="科比·布莱恩特">
   </main>
   <footer>
   <a href="https://ipw.cn/ssl/?site=studios.skystrikers.dpdns.org" title="本站支持SSL安全访问" target='_blank'><img style='display:inline-block;vertical-align:middle' alt="本站支持SSL安全访问" src="https://static.ipw.cn/icon/ssl-s1.svg"></a>
