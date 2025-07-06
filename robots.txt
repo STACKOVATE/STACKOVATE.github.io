@@ -1,3 +1,4 @@
 User-agent: *
 Disallow: /images/
 Disallow: /.vscode/
+Sitemap: https://studios.skystrikers.dpdns.org/sitemap.xml
