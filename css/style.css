@@ -167,6 +167,21 @@ footer a:hover {
     margin-top: 20px;
 }
 
+/* ===== 网站时间显示 ===== */
+#site-age {
+    color: #39ff14; /* 黑客绿 */  
+    padding: 10px;  
+    border-radius: 4px;  
+    font-family: 'Courier New';  
+    display: inline-block;  
+}  
+
+#age-days {  
+    font-size: 1.5em;  
+    font-weight: bold;  
+    text-shadow: 0 0 10px #0f0; /* 发光效果 */  
+}  
+
 /* 移动端适配 */
 @media (max-width: 768px) {
     .gallery {
