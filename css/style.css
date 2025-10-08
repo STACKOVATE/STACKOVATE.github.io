@@ -399,14 +399,3 @@ nav a {
 }
 }
 
-/* 作者信息样式 */
-.author-info {
-    background: #f2e9e4;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-
-.author-info p {
-    margin: 5px 0;
-}
