@@ -1,34 +1,138 @@
-/* ===== 暴躁老哥强制修正 ===== */
-
-@font-face {
-    font-family: 'AlimamaShuHeiTi';
-    src: url('/fonts/AlimamaShuHeiTi.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+:root {
+    /* 统一色彩系统 - 科技蓝主题 */
+    --primary: #2563eb;
+    /* 主色：行动按钮/悬停 */
+    --primary-dark: #1d4ed8;
+    /* 深蓝 */
+    --text: #1e293b;
+    /* 正文文字 */
+    --text-light: #64748b;
+    /* 次要文字 */
+    --bg: #ffffff;
+    /* 页面背景 */
+    --card-bg: #f8fafc;
+    /* 卡片背景 */
+    --border: #e2e8f0;
+    /* 边框 */
+    --radius: 8px;
+    /* 圆角 */
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    /* 轻阴影 */
+}
+
+/* ===== 全局布局 ===== */
 html {
     height: 100%;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'AlimamaShuHeiTi', Arial, sans-serif;
-    background: #232323;
-    color: #232323;
-    display: flex !important;
-    flex-direction: column !important;
+    font-family: 'AlimamaShuHeiTi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
     min-height: 100vh;
-    padding-top: 60px;
+    /* 修复 navbar 遮挡：padding = navbar 高度 */
+    padding-top: 70px;
 }
 
+/* ===== 导航栏 (固定顶部) ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background-color: var(--bg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+
+.logo-text {
+  background: linear-gradient(135deg, var(--primary), #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* 导航链接 */
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 24px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  font-size: 1.05rem;
+  transition: color 0.2s;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+/* 悬停下划线效果 */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ===== 主内容区 ===== */
+header {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    padding: 60px 0 40px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+
+header h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--text);
+    letter-spacing: -0.5px;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 16px auto 0;
+}
+
+main {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== Logo 图片优化 ===== */
 .logo-image {
     height: 300px;
     /* 根据你的导航栏高度调整，通常30-50px */
@@ -39,141 +143,34 @@ body {
     /* 避免图片底部有多余空间 */
 }
 
-.logo a {
-    font-size: 1.5em;
-    font-weight: bold;
-    text-decoration: none;
-    color: #232323;
-}
-
-/* 导航链接列表 */
-.nav-links {
-    list-style: none;
-    display: flex;
-}
-
-.nav-links li {
-    margin-left: 20px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #333;
-    transition: color 0.3s ease;
-    /* 颜色过渡效果 */
-}
-
-/* 鼠标悬停效果 */
-.nav-links a:hover {
-    color: #1e87f0;
-    /* 悬停颜色 */
-}
-
-.navbar {
-    position: fixed;
-     /* 固定定位 */
-    top: 0;
-    width: 100%;
-    height: 70px;
-    background-color: #E0E0E0;
-     /* 背景色 */
-    box-shadow: #fff;
-     /* 底部阴影，增强层次感 */
-    display: flex;
-    justify-content: space-between;
-    /* 左右布局 */
-    align-items: center;
-    padding: 0 20px;
-    z-index: 1000;
-    /* 确保导航栏在最上层 */
-}
-
-header {
-    background: #22223b;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #fff;
-    padding: 32px 0 24px 0;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(34,34,59,0.08);
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    letter-spacing: 2px;
-}
-
-header p {
-    margin: 12px 0 0 0;
-    font-size: 1.2rem;
-    color: #c9ada7;
-}
-
-nav {
-    background: #4a4e69;
-    text-align: center;
-    padding: 12px 0;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 18px;
-    font-size: 1rem;
-    transition: color 0.2s;
-}
-
-nav a:hover {
-    color: #f2e9e4;
-}
-
-main {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 24px;
-    flex-grow: 1;
-    text-align: center;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 24px rgba(34, 34, 59, 0.07);
-    flex: 1;
-}
-
-/* 图片画廊 */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin: 30px 0;
-}
-
-.gallery figure {
-    margin: 0;
-    text-align: center;
-}
-
-.gallery img {
-    max-height: 300px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-/* SEO内容区 */
+/* ===== 内容卡片 ===== */
 .seo-content {
-    text-align: left;
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.6;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 32px;
+    margin: 30px 0;
+    box-shadow: var(--shadow);
 }
 
 .seo-content h2 {
-    color: #4a4e69;
-    border-bottom: 2px solid #c9ada7;
+    color: var(--primary);
+    font-size: 1.8rem;
+    margin-bottom: 16px;
     padding-bottom: 8px;
+    border-bottom: 2px solid var(--primary);
 }
 
-/* 下载按钮 */
+.seo-content ul {
+    padding-left: 24px;
+    margin: 16px 0;
+}
+
+.seo-content li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+/* ===== 按钮样式 ===== */
 .links {
     margin: 40px 0;
     text-align: center;
@@ -181,67 +178,28 @@ main {
 
 .link-btn {
     display: inline-block;
-    background: #4a4e69;
+    background: var(--primary);
     color: white !important;
-    padding: 12px 24px;
+    padding: 12px 32px;
     margin: 10px;
     border-radius: 50px;
     text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
 }
 
 .link-btn:hover {
-    background: #22223b;
-    transform: translateY(-3px);
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
 }
 
+/* ===== 页脚 ===== */
+/* ===== 专业页脚样式 ===== */
 footer {
-    background: #22223b;
-    color: #fff;
-    text-align: center;
-    padding: 25px 10px;
-    padding-bottom: max(25px, env(safe-area-inset-bottom));
-}
-
-footer a {
-    color: #f2e9e4 !important;
-    text-decoration: none;
-    margin: 0 15px;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-.ssl-badge {
-    margin: 15px auto;
-}
-
-.service-providers img {
-    max-height: 35px;
-    vertical-align: middle;
-    margin: 0 10px;
-}
-
-.partners {
-    margin: 20px 0;
-}
-
-.dev-notice {
-    font-size: 0.9rem;
-    color: #c9ada7;
-    margin-top: 20px;
-}
-
-/* 页脚基础样式 */
-.site-footer {
-    background-color: #1a1a1a;
-    /* 深色背景，更显专业 */
-    color: #ccc;
     padding: 40px 0 20px;
     margin-top: 60px;
-    /* 与主体内容保持距离 */
 }
 
 .footer-container {
@@ -251,13 +209,13 @@ footer a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 30px;
 }
 
-/* 品牌区域样式 */
+/* 品牌区域 */
 .footer-brand {
     flex: 1;
-    min-width: 300px;
-    margin-bottom: 30px;
+    min-width: 280px;
 }
 
 .footer-logo {
@@ -267,22 +225,50 @@ footer a:hover {
 }
 
 .footer-logo a {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
 }
 
 .footer-tagline {
     color: #888;
-    font-size: 0.9em;
+    font-size: 0.95em;
     margin-top: 5px;
+    line-height: 1.5;
 }
 
-/* 链接区域样式 */
+/* 社交媒体图标 */
+.social-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: #333;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.8em;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #2563eb;
+    /* 科技蓝 */
+    transform: translateY(-2px);
+}
+
+/* 链接区域 */
 .footer-links {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
-    /* 现代CSS，替代margin */
 }
 
 .link-column h3 {
@@ -306,96 +292,170 @@ footer a:hover {
     color: #999;
     text-decoration: none;
     transition: color 0.3s ease;
-    font-size: 0.9em;
+    font-size: 0.95em;
 }
 
 .link-column a:hover {
-    color: #1e87f0;
+    color: #2563eb;
     /* 与导航栏保持一致的主题色 */
 }
 
-/* 社交媒体图标 */
-.social-links {
-    display: flex;
-    gap: 15px;
-    margin-top: 15px;
-}
-
-.social-icon {
-    display: inline-block;
-    width: 36px;
-    height: 36px;
-    background-color: #333;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 36px;
-    transition: all 0.3s ease;
-}
-
-.social-icon:hover {
-    background-color: #1e87f0;
-    transform: translateY(-2px);
-}
-
-/* 版权信息区域 */
+/* 版权信息 */
 .footer-bottom {
     max-width: 1200px;
-    margin: 40px auto 0;
+    margin: 30px auto 0;
     padding: 20px 20px 0;
     border-top: 1px solid #333;
     text-align: center;
     color: #666;
-    font-size: 0.8em;
+    font-size: 0.9em;
 }
 
-/* ===== 网站时间显示 ===== */
-#site-age {
-    color: #39ff14; /* 黑客绿 */  
-    padding: 10px;  
-    border-radius: 4px;  
-    font-family: 'Courier New';  
-    display: inline-block;  
-}  
+.footer-bottom a {
+    color: #666;
+    text-decoration: none;
+}
 
-#age-days {  
-    font-size: 1.5em;  
-    font-weight: bold;  
-    text-shadow: 0 0 10px #0f0; /* 发光效果 */  
-}  
+.footer-bottom a:hover {
+    color: #2563eb;
+}
+
+/* 网站状态区域 */
+.footer-status {
+    text-align: center;
+    padding: 0 20px;
+    margin-top: 20px;
+}
+
+.dev-notice {
+    color: #ff9f43;
+    font-size: 0.9em;
+    margin: 10px 0;
+}
+
+/* 网站运行时间 */
+#site-age {
+    color: #008cff;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-family: 'Courier New', monospace;
+
+}
+
+#age-days {
+    font-size: 1.6em;
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(0, 128, 255, 0.7);
+}
 
 /* 移动端适配 */
 @media (max-width: 768px) {
-    .gallery {
-    flex-direction: column;
-    align-items: center;
-}
+.navbar {
+        padding: 0 15px;
+        height: 60px;
+        overflow-x: auto;
+        /* 允许水平滚动 */
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
 
-.gallery img {
-    max-width: 100%;
-    max-height: 200px;
-}
+    .navbar::-webkit-scrollbar {
+        /* Hide scrollbar for Chrome/Safari */
+        display: none;
+    }
 
-.links {
-    display: flex;
-    flex-direction: column;
-}
+    .logo {
+        font-size: 1.2rem;
+        flex-shrink: 0;
+        /* 防止 logo 被压缩 */
+    }
 
-.link-btn {
-    margin: 8px auto;
-    width: 80%;
-}
+    .nav-links {
+        display: flex;
+        /* 保持横向 */
+        margin: 0;
+        padding: 0 10px;
+        /* 添加一些左右内边距 */
+        flex-shrink: 0;
+        /* 防止链接列表被压缩 */
+    }
 
-main {
-    padding: 12px;
-}
+    .nav-links li {
+        margin-left: 16px;
+        /* 减小间距 */
+        flex-shrink: 0;
+        /* 每个链接不被压缩 */
+    }
 
-header h1 {
-    font-size: 1.5rem;
-}
+    .nav-links a {
+        font-size: 0.95rem;
+        /* 字体稍微小一点 */
+        white-space: nowrap;
+        /* 防止文字换行 */
+    }
 
-nav a {
-    margin: 0 8px;
-    font-size: 0.95rem;
-}
-}
+    /* 主内容区调整 */
+    body {
+        padding-top: 60px;
+        /* 匹配移动端 navbar 高度 */
+    }
 
+    header {
+        padding: 40px 0 30px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+
+    .logo-image {
+        max-height: 150px;
+        margin: 15px auto;
+    }
+
+    .seo-content {
+        padding: 24px 16px;
+    }
+
+    .link-btn {
+        display: block;
+        width: 80%;
+        margin: 12px auto;
+        padding: 14px 0;
+    }
+
+    /* 页脚移动端调整 */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-brand,
+    .footer-links {
+        width: 100%;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .link-column {
+        min-width: 140px;
+    }
+
+    #site-age {
+        width: 90%;
+        margin: 15px auto 0;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
