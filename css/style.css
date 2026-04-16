@@ -38,6 +38,13 @@ body {
     min-height: 100vh;
     /* 修复 navbar 遮挡：padding = navbar 高度 */
     padding-top: 70px;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* ===== 导航栏 (固定顶部) ===== */
@@ -139,6 +146,20 @@ main {
     width: auto;
     display: block;
     /* 避免图片底部有多余空间 */
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
 }
 
 /* ===== 内容卡片 ===== */
@@ -348,15 +369,12 @@ footer {
 
 /* 移动端适配 */
 @media (max-width: 768px) {
-.navbar {
+    .navbar {
         padding: 0 15px;
-        height: 60px;
-        overflow-x: auto;
-        /* 允许水平滚动 */
-        -ms-overflow-style: none;
-        /* IE and Edge */
-        scrollbar-width: none;
-        /* Firefox */
+        height: auto;
+        min-height: 60px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .navbar::-webkit-scrollbar {
@@ -372,26 +390,23 @@ footer {
 
     .nav-links {
         display: flex;
-        /* 保持横向 */
+        flex-wrap: wrap;
+        justify-content: center;
         margin: 0;
-        padding: 0 10px;
-        /* 添加一些左右内边距 */
-        flex-shrink: 0;
-        /* 防止链接列表被压缩 */
+        padding: 10px;
+        gap: 12px;
+        width: 100%;
     }
 
     .nav-links li {
-        margin-left: 16px;
-        /* 减小间距 */
+        margin: 0;
         flex-shrink: 0;
-        /* 每个链接不被压缩 */
     }
 
     .nav-links a {
         font-size: 0.95rem;
-        /* 字体稍微小一点 */
         white-space: nowrap;
-        /* 防止文字换行 */
+        padding: 8px 10px;
     }
 
     /* 主内容区调整 */
