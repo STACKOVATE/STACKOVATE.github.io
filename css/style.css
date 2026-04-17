@@ -28,6 +28,7 @@
 /* ===== 全局布局 ===== */
 html {
     height: 100%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -38,6 +39,14 @@ body {
     /* 修复 navbar 遮挡：padding = navbar 高度 */
     padding-top: 70px;
     overflow-x: hidden;
+    /* 页面过渡动画初始状态 */
+    opacity: 1;
+}
+
+/* ===== 锚点偏移优化 ===== */
+[id] {
+    scroll-margin-top: 90px;
+    /* 导航栏高度 + 额外间距 */
 }
 
 img {
@@ -84,7 +93,8 @@ img {
 
 .nav-links a {
     text-decoration: none;
-    color: #000000; /* White text for black navbar */
+    color: #000000;
+    /* White text for black navbar */
     font-weight: 500;
     font-size: 1.05rem;
     transition: color 0.2s;
@@ -860,6 +870,7 @@ footer {
 
 /* ===== Mobile Responsive for About Page ===== */
 @media (max-width: 768px) {
+
     .story-section,
     .mission-section,
     .project-highlight,
@@ -1725,6 +1736,7 @@ footer {
 
 /* ===== Mobile Responsive for Roadmap Page ===== */
 @media (max-width: 768px) {
+
     .recruitment-section,
     .roadmap-section,
     .vision-section,
@@ -2140,6 +2152,7 @@ footer {
 
 /* ===== Mobile Responsive for Contact Page ===== */
 @media (max-width: 768px) {
+
     .contact-info-section,
     .contact-form-section,
     .faq-section,
@@ -2440,6 +2453,7 @@ footer {
 
 /* ===== Mobile Responsive for Team Page ===== */
 @media (max-width: 768px) {
+
     .team-intro-section,
     .team-members-section,
     .join-team-section {
