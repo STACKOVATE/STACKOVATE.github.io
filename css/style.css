@@ -845,27 +845,28 @@ footer {
 /* Join Section */
 .join-section {
     padding: 80px 20px;
-    background: var(--bg);
+    background: #ffffff;
     text-align: center;
+    color: #1d1d1f;
 }
 
 .join-section h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--text);
+    color: #1d1d1f;
     margin-bottom: 40px;
 }
 
 .join-section p {
     font-size: 1.2rem;
-    color: var(--text-light);
+    color: #333333;
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto 20px;
 }
 
 .join-section strong {
-    color: var(--text);
+    color: #1d1d1f;
 }
 
 /* ===== Mobile Responsive for About Page ===== */
@@ -1694,31 +1695,32 @@ footer {
     font-weight: 500;
 }
 
-/* Join Section */
-.join-section {
+/* Roadmap Join Section */
+.roadmap-join-section {
     padding: 80px 20px;
-    background: var(--card-bg);
+    background: #ffffff;
     text-align: center;
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 1s ease-out, transform 1s ease-out;
+    color: #1d1d1f;
 }
 
-.join-section.visible {
+.roadmap-join-section.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-.join-section h2 {
+.roadmap-join-section h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--text);
+    color: #1d1d1f;
     margin-bottom: 20px;
 }
 
-.join-section p {
+.roadmap-join-section p {
     font-size: 1.2rem;
-    color: var(--text-light);
+    color: #333333;
     line-height: 1.6;
     margin-bottom: 20px;
     max-width: 800px;
@@ -1740,14 +1742,14 @@ footer {
     .recruitment-section,
     .roadmap-section,
     .vision-section,
-    .join-section {
+    .roadmap-join-section {
         padding: 60px 20px;
     }
 
     .recruitment-section h2,
     .roadmap-section h2,
     .vision-section h2,
-    .join-section h2 {
+    .roadmap-join-section h2 {
         font-size: 2rem;
     }
 
@@ -2515,4 +2517,18 @@ footer {
     .cta-button {
         width: 200px;
     }
+}
+
+/* Final override for join-section contrast */
+section.join-section,
+section.join-section * {
+    color: #1d1d1f !important;
+}
+
+section.join-section {
+    background-color: #ffffff !important;
+}
+
+section.join-section a.learn-more {
+    color: var(--primary) !important;
 }
