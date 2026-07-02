@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   t="1782999282405"
+   class="icon"
+   viewBox="0 0 1024 1024"
+   version="1.1"
+   p-id="6233"
+   width="200"
+   height="200"
+   id="svg1"
+   sodipodi:docname="QQ-circle-fill.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="3.885"
+     inkscape:cx="100"
+     inkscape:cy="100"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <g
+     id="g7">
+    <g
+       id="g6">
+      <g
+         id="g5">
+        <g
+           id="g4">
+          <g
+             id="g3">
+            <g
+               id="g2">
+              <g
+                 id="g1">
+                <path
+                   d="M 512,64 C 335.83318,61.558265 165.94854,174.8009 99.209375,337.62813 29.527902,497.58955 65.595035,696.29842 187.71541,821.0842 305.20951,947.53673 498.78186,993.6978 660.86726,934.66664 828.87079,877.58362 952.75378,712.55058 959.417,535.05195 970.56782,362.50199 870.5374,190.04477 715.94233,113.01532 653.13824,80.738261 582.59732,63.892511 512,64 Z m 210.5,612.4 c -25.46004,-4.68849 -46.69359,-81.28322 -47.97656,-27.75156 0.20808,30.89659 -44.2124,64.49044 -40.82989,79.19922 44.8686,4.93191 49.13397,48.89041 -0.24556,39.51534 -59.49287,3.08792 -118.67751,-6.21365 -178.00479,-0.007 -29.76731,-5.29167 -94.5816,15.11381 -101.70258,-18.51231 14.18383,-19.92807 65.06389,-16.96013 27.14678,-41.00208 -25.44111,-14.30857 -28.59185,-83.24682 -38.78584,-75.71042 -10.38104,23.78221 -52.89998,68.57911 -44.72226,14.00581 4.58328,-63.6965 36.71626,-121.19493 54.71317,-180.70268 -2.01749,-77.17357 23.37522,-169.93861 102.69835,-199.71063 69.02985,-25.98308 158.20634,-1.4681 190.96216,68.35035 21.96687,41.8806 28.26119,90.07078 27.24702,136.8259 23.656,64.11489 59.45075,129.2475 53.33437,199.52656 l -1.82226,4.39239 z"
+                   p-id="6234"
+                   id="path1"
+                   style="fill:#ffffff" />
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

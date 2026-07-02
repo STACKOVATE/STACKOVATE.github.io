@@ -9,15 +9,19 @@
     --primary: #0071e3;
     /* Apple blue */
     --primary-dark: #005bb5;
-    --text: #1d1d1f;
-    /* Dark gray */
-    --text-light: #86868b;
-    /* Light gray */
-    --bg: #ffffff;
-    /* White background */
-    --card-bg: #f5f5f7;
-    /* Light gray cards */
-    --border: #d2d2d7;
+    --text: #ffffff;
+    /* Light text for dark background */
+    --text-light: #bfbfbf;
+    /* Muted light gray */
+    --border: #3a3a3d;
+    /* Navbar and footer backgrounds to match dark theme */
+    --navbar-bg: #0f0f11;
+    --footer-bg: #09090a;
+    /* Muted light gray */
+    --bg: #1d1d1f;
+    /* Dark background */
+    --card-bg: #242427;
+    /* Dark card background */
     /* Subtle borders */
     --radius: 12px;
     /* Rounded corners */
@@ -61,8 +65,8 @@ img {
     top: 0;
     width: 100%;
     height: 70px;
-    background-color: #000000;
-    /* Black background like Apple */
+    background-color: var(--navbar-bg);
+    /* Dark navbar background */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
@@ -93,8 +97,8 @@ img {
 
 .nav-links a {
     text-decoration: none;
-    color: #000000;
-    /* White text for black navbar */
+    color: var(--text);
+    /* White text for dark navbar */
     font-weight: 500;
     font-size: 1.05rem;
     transition: color 0.2s;
@@ -123,7 +127,7 @@ img {
 
 /* ===== 主内容区 ===== */
 header {
-    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    background: linear-gradient(135deg, #232328 0%, #1d1d1f 100%);
     padding: 60px 0 40px;
     text-align: center;
     border-bottom: 1px solid var(--border);
@@ -383,8 +387,8 @@ header p {
 /* ===== 页脚 ===== */
 /* ===== 专业页脚样式 ===== */
 footer {
-    background-color: #000000;
-    /* Black background */
+    background-color: var(--footer-bg);
+    /* Dark footer background */
     color: #ffffff;
     /* White text */
     padding: 40px 0 20px;
@@ -414,7 +418,7 @@ footer {
 }
 
 .footer-logo a {
-    color: #000000;
+    color: var(--text);
     text-decoration: none;
 }
 
@@ -438,7 +442,7 @@ footer {
     justify-content: center;
     width: 36px;
     height: 36px;
-    background-color: #333;
+    background-color: #2b2b2d;
     border-radius: 50%;
     text-decoration: none;
     color: #fff;
@@ -451,6 +455,36 @@ footer {
     background-color: #2563eb;
     /* 科技蓝 */
     transform: translateY(-2px);
+}
+
+.social-icon img,
+.contact-icon img,
+.btn-icon img,
+.member-link img {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+.social-icon img {
+    max-width: 24px;
+    max-height: 24px;
+}
+
+.member-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.btn-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
 }
 
 /* 链接区域 */
@@ -845,28 +879,28 @@ footer {
 /* Join Section */
 .join-section {
     padding: 80px 20px;
-    background: #ffffff;
+    background: var(--card-bg);
     text-align: center;
-    color: #1d1d1f;
+    color: var(--text);
 }
 
 .join-section h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #1d1d1f;
+    color: var(--text);
     margin-bottom: 40px;
 }
 
 .join-section p {
     font-size: 1.2rem;
-    color: #333333;
+    color: var(--text-light);
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto 20px;
 }
 
 .join-section strong {
-    color: #1d1d1f;
+    color: var(--text);
 }
 
 /* ===== Mobile Responsive for About Page ===== */
@@ -1698,12 +1732,12 @@ footer {
 /* Roadmap Join Section */
 .roadmap-join-section {
     padding: 80px 20px;
-    background: #ffffff;
+    background: var(--bg) !important;
     text-align: center;
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 1s ease-out, transform 1s ease-out;
-    color: #1d1d1f;
+    color: var(--text) !important;
 }
 
 .roadmap-join-section.visible {
@@ -1714,13 +1748,13 @@ footer {
 .roadmap-join-section h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #1d1d1f;
+    color: var(--text) !important;
     margin-bottom: 20px;
 }
 
 .roadmap-join-section p {
     font-size: 1.2rem;
-    color: #333333;
+    color: var(--text-light) !important;
     line-height: 1.6;
     margin-bottom: 20px;
     max-width: 800px;
@@ -1734,6 +1768,27 @@ footer {
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 40px;
+}
+
+/* Buttons specifically inside roadmap join section */
+.roadmap-join-section .cta-button.primary {
+    background: var(--primary);
+    color: #ffffff;
+}
+
+.roadmap-join-section .cta-button.primary:hover {
+    background: var(--primary-dark);
+}
+
+.roadmap-join-section .cta-button.secondary {
+    background: transparent;
+    color: var(--text);
+    border: 2px solid var(--text);
+}
+
+.roadmap-join-section .cta-button.secondary:hover {
+    background: var(--text);
+    color: var(--bg);
 }
 
 /* ===== Mobile Responsive for Roadmap Page ===== */
@@ -2522,11 +2577,11 @@ footer {
 /* Final override for join-section contrast */
 section.join-section,
 section.join-section * {
-    color: #1d1d1f !important;
+    color: var(--text) !important;
 }
 
 section.join-section {
-    background-color: #ffffff !important;
+    background-color: var(--card-bg) !important;
 }
 
 section.join-section a.learn-more {
