@@ -5,7 +5,7 @@
 
 个人项目展示与技术博客站点，基于 **Jekyll** 静态网站生成器构建。
 
-➡️ **在线访问**: [https://xiaoheiprint9.github.io](https://STACKOVATE.github.io)
+➡️ **在线访问**: [https://stackovate.github.io](https://STACKOVATE.github.io)
 
 ---
 
